@@ -42,8 +42,6 @@ body{
     font-family: 'Rubik', sans-serif;
     background-color: var(--Very-dark-bg);
     width: 100%;
-
-    /* height:100vh; */
     
     margin:0 auto;
 
@@ -282,15 +280,9 @@ section.main-content svg:active{
 
 @media only screen and (max-width: 68.0625rem) and (min-width: 45rem) {
 
-    body{   
-
-        height:100vh;      
-        
-    }
     
     
     .container{
-        margin:0;
     
         gap: 1rem;
         grid-template-columns: repeat(2, 1fr); 
@@ -311,6 +303,11 @@ section.main-content svg:active{
 @media (min-width: 68.125rem){
 
     /* GENERAL */
+    body{   
+
+        height:100vh;      
+        
+    }
     .container{
         
         width:75%;
