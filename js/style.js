@@ -29,7 +29,7 @@
           `<aside class="color-svg">
           </aside>
           <section class="main-content">
-            <div class="title-time" id="append">
+            <div class="title-time">
               <h2>${obj.title}</h2>
               <h1>${obj.timeframes.weekly.current}hrs</h1>           
             </div>
@@ -54,7 +54,9 @@
           let [one,two,three,four,five,six] = headLines;
           let [paragraphsOne,paragraphsTwo,paragraphsThree,paragraphsFour,paragraphsFive,paragraphsSix] = paragraphs;
 
-        daily.addEventListener('click', function() {
+        daily.addEventListener('click', function(event) {
+
+          event.preventDefault();
 
               one.textContent = `${data[0].timeframes.daily.current}hrs`;
               two.textContent = `${data[1].timeframes.daily.current}hrs`;
@@ -69,10 +71,13 @@
               paragraphsFour.textContent = `Last Week - ${data[3].timeframes.daily.previous}hrs`;
               paragraphsFive.textContent = `Last Week - ${data[4].timeframes.daily.previous}hrs`;
               paragraphsSix.textContent = `Last Week - ${data[5].timeframes.daily.previous}hrs`;
+          
             
 
         }) ;
-        weekly.addEventListener('click', function() {
+        weekly.addEventListener('click', function(event) {
+
+          event.preventDefault();
 
               one.textContent = `${data[0].timeframes.weekly.current}hrs`;
               two.textContent = `${data[1].timeframes.weekly.current}hrs`;
@@ -90,7 +95,9 @@
             
 
         }) ;
-        monthly.addEventListener('click', function() {
+        monthly.addEventListener('click', function(event) {
+
+          event.preventDefault();
 
               one.textContent = `${data[0].timeframes.monthly.current}hrs`;
               two.textContent = `${data[1].timeframes.monthly.current}hrs`;
